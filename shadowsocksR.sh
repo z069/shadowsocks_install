@@ -4,12 +4,14 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                  #
 #   Description: One click Install ShadowsocksR Server            #
-#   Author: 91yun <https://twitter.com/91yun>                     #
+#   Author: z069 <https://twitter.com/z069>                       #
 #   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
 #   Thanks: @Teddysun <i@teddysun.com>                            #
+#   Thanks: @91yun <https://twitter.com/91yun>                    #
 #   Intro:  https://shadowsocks.be/9.html                         #
+#   Intro:  https://www.91yun.org/archives/2079                   #
 #=================================================================#
-
+ 
 clear
 echo
 
@@ -213,9 +215,9 @@ function config_shadowsocks(){
     "timeout": 120,
     "udp_timeout": 60,
     "method": "chacha20",
-    "protocol": "auth_sha1_compatible",
+    "protocol": "auth_sha1_v2_compatible",
     "protocol_param": "",
-    "obfs": "http_simple_compatible",
+    "obfs": "tls1.2_ticket_auth_compatible",
     "obfs_param": "",
     "dns_ipv6": false,
     "connect_verbose_info": 0,
@@ -259,8 +261,8 @@ function install_ss(){
         echo -e "Password: \033[41;37m ${shadowsockspwd} \033[0m"
         echo -e "Local IP: \033[41;37m 127.0.0.1 \033[0m"
         echo -e "Local Port: \033[41;37m 1080 \033[0m"
-        echo -e "Protocol: \033[41;37m auth_sha1 \033[0m"
-        echo -e "obfs: \033[41;37m http_simple \033[0m"
+        echo -e "Protocol: \033[41;37m auth_sha1_v2 \033[0m"
+        echo -e "obfs: \033[41;37m tls1.2_ticket_auth \033[0m"
         echo -e "Encryption Method: \033[41;37m chacha20 \033[0m"
         echo
         echo "Welcome to visit:https://shadowsocks.be/9.html"
